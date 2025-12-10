@@ -10,5 +10,12 @@ public class Main03 {
         System.out.println("Digite o preço: ");
         double priceValue = scanner.nextDouble();
         
+        if (priceValue >= 50){
+            DiscountCalculator discountCalculator = new DiscountCalculator();
+            System.out.println("Valor com desconto: " + discountCalculator.calculateDiscount);
+        } else {
+            System.out.println("Valor sem desconto: " + priceValue);
+        }
     }
 }
+
