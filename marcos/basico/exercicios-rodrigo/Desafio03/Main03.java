@@ -9,13 +9,13 @@ public class Main03 {
         System.out.println("Calculadora de descontos: ");
         System.out.println("Digite o preço: ");
         double priceValue = scanner.nextDouble();
-        
-        if (priceValue >= 50){
+
+        if(priceValue >= 50){
             DiscountCalculator discountCalculator = new DiscountCalculator();
-            System.out.println("Valor com desconto: " + discountCalculator.calculateDiscount);
+            System.out.println("Valor após desconto: " + discountCalculator.calculateDiscount(priceValue));
         } else {
             System.out.println("Valor sem desconto: " + priceValue);
         }
+        scanner.close();
     }
 }
-
