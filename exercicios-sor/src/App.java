@@ -1,9 +1,8 @@
 
+import calculadoraimc.CalculadoraImc;
+import conversorcelsius.ConversorCelsiusFahrenheit;
+import conversorcelsius.ConversorCelsiusKelvin;
 import java.util.Scanner;
-
-import CalculadoraImc.CalculadoraImc;
-import Conversor.ConversorCelsiusFahrenheit;
-import Conversor.ConversorCelsiusKelvin;
 
 public class App {
     public static void main(String[] args) {
