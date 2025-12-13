@@ -34,7 +34,7 @@ public class TemperaturaImpl implements TemperaturaService {
                 case 1 -> {
                     System.out.println("Você escolheu converter de CELSIUS para FAHRENHEIT");
 
-                    
+                    //CORRIGIR URGENTEMENTE
                     int temperaturaEmCelsius = temperatura.getTemperatura();
                     System.out.println("Insira a temperatura em CELSIUS: ");
                     temperaturaEmCelsius = input.nextInt();
