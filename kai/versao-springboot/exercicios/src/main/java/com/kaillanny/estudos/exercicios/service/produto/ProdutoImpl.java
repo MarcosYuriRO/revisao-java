@@ -2,7 +2,6 @@ package com.kaillanny.estudos.exercicios.service.produto;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kaillanny.estudos.exercicios.model.Produto;
@@ -18,8 +17,7 @@ public class ProdutoImpl implements ProdutoService {
     @Override 
     public void calcularDesconto() {
         System.out.println("Insira o preço da sua compra: ");
-        preco = input.nextInt();
-        produto.setPreco(preco);
+        produto.setPreco(input.nextInt());
         preco = produto.getPreco();
 
         double desconto;

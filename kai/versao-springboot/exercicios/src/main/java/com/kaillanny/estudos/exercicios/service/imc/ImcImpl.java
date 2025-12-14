@@ -14,27 +14,16 @@ public class ImcImpl implements ImcService{
     int peso;
     double altura;
 
-    /*public int definirPeso() {
-                return peso;
-    }
-
-    public double definirAltura() {
-        
-        return altura;
-    }*/
-
     Imc imc = new Imc(peso, altura);
 
     @Override
     public void calcularImc() {
         System.out.println("Insira o seu peso (em kg): ");
-        peso = input.nextInt();
-        imc.setPeso(peso);
+        imc.setPeso(input.nextInt());
         peso = imc.getPeso();
 
         System.out.println("Insira a sua altura (em metros): ");
-        altura = input.nextDouble();
-        imc.setAltura(altura);
+        imc.setAltura(input.nextDouble());
         altura = imc.getAltura();
 
         double imcCalculado = peso / (altura * altura);

@@ -1,8 +1,19 @@
 package com.kaillanny.estudos.exercicios.model;
 
-import lombok.Data;
-
-@Data
 public class Temperatura {
     private int temperatura;
+
+    
+    public Temperatura(int temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public int getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(int temperatura) {
+        this.temperatura = temperatura;
+    }
+
 }

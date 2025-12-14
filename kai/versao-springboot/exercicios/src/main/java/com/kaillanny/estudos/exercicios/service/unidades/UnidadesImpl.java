@@ -12,8 +12,9 @@ public class UnidadesImpl implements UnidadesService{
 
     Scanner input = new Scanner(System.in);
 
-    @Autowired
-    private Unidades unidades;
+    int metros;
+
+    Unidades unidades = new Unidade(metros);
     
     @Override
     public void converterUnidades() {
