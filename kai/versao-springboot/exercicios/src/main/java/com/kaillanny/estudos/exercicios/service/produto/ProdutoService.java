@@ -1,5 +1,5 @@
-package com.kaillanny.estudos.exercicios.service.desconto;
+package com.kaillanny.estudos.exercicios.service.produto;
 
-public interface DescontoService {
+public interface ProdutoService {
     public void calcularDesconto();
 }
