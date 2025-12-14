@@ -20,7 +20,7 @@ public class TemperaturaImpl implements TemperaturaService {
         int opcao;
         do {
             System.out.println("""
-            Você deseja converter CELSIUS para qual temperatura? 
+            Você deseja converter CELSIUS para qual temperatura?
 
                 1. FAHRENHEIT;
                 2. KELVIN;

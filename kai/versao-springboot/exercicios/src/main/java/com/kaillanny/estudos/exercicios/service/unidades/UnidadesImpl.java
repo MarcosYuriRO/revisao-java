@@ -14,7 +14,7 @@ public class UnidadesImpl implements UnidadesService{
 
     int metros;
 
-    Unidades unidades = new Unidade(metros);
+    Unidades unidades = new Unidades(metros);
     
     @Override
     public void converterUnidades() {
@@ -41,7 +41,7 @@ public class UnidadesImpl implements UnidadesService{
                     System.out.println("Insira quantos METROS você deseja converter para CENTÍMETROS (cm): ");
 
                     int metros = input.nextInt();
-                    unidades.setUnidadeDeMedida(metros);
+                    unidades.setMetros(metros);
 
                     int centimetros = (metros * 10) * 10;
                     System.out.printf("A conversão de %d metros para centímetros é de: %d cm.", metros, centimetros);
@@ -52,7 +52,7 @@ public class UnidadesImpl implements UnidadesService{
                     System.out.println("Insira quantos CENTÍMETROS (cm) você deseja converter para METROS: ");
 
                     int centimetros = input.nextInt();
-                    unidades.setUnidadeDeMedida(centimetros);
+                    unidades.setMetros(centimetros);
 
                     int metros = (centimetros / 10) / 10;
                     System.out.printf("A conversão de %d centímetros para metros é de: %d m.",  centimetros, metros);
@@ -63,7 +63,7 @@ public class UnidadesImpl implements UnidadesService{
                     System.out.println("Insira quantos QUILÔMETROS (km) você deseja converter para METROS: ");
 
                     int quilometros = input.nextInt();
-                    unidades.setUnidadeDeMedida(quilometros);
+                    unidades.setMetros(quilometros);
 
                     int metros = (quilometros * 10) * 10 * 10;
                     System.out.printf("A conversão de %d quilometros para metros é de: %d m.",  quilometros, metros);
@@ -74,7 +74,7 @@ public class UnidadesImpl implements UnidadesService{
                     System.out.println("Insira quantos METROS você deseja converter para QUILÔMETROS (km): ");
 
                     int metros = input.nextInt();
-                    unidades.setUnidadeDeMedida(metros);
+                    unidades.setMetros(metros);
 
                     int quilometros = (metros / 10) / 10 / 10;
                     System.out.printf("A conversão de %d metros para quilometros é de: %d km.", metros, quilometros);
@@ -85,7 +85,7 @@ public class UnidadesImpl implements UnidadesService{
                     System.out.println("Insira quantos METROS você deseja converter para MILHAS (mi): ");
 
                     int metros = input.nextInt();
-                    unidades.setUnidadeDeMedida(metros);
+                    unidades.setMetros(metros);
 
                     final double CONVERTER_PARA_MILHAS = 0.00062137119;
                     double metrosConvertidos = (double) metros * CONVERTER_PARA_MILHAS;
