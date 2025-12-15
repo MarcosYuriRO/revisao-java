@@ -1,5 +1,8 @@
 package com.marcos.exercicios.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Product {
     private double price;
     private double discount;

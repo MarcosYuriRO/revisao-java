@@ -1,10 +1,16 @@
 package com.marcos.exercicios.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Calculable {
     private int number;
 
     public Calculable(int number) {
-        number = number;
+        this.number = number;
+    }
+
+    public Calculable() {
     }
 
     public int getNumber() {
