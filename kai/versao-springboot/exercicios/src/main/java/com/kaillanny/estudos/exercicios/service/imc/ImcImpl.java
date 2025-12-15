@@ -2,7 +2,6 @@ package com.kaillanny.estudos.exercicios.service.imc;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kaillanny.estudos.exercicios.model.Imc;
@@ -12,14 +11,22 @@ public class ImcImpl implements ImcService{
 
     Scanner input = new Scanner(System.in);
 
-    @Autowired
-    private Imc imc;
+    int peso;
+    double altura;
+
+    Imc imc = new Imc(peso, altura);
 
     @Override
     public void calcularImc() {
+        System.out.println("Insira o seu peso (em kg): ");
+        imc.setPeso(input.nextInt());
+        peso = imc.getPeso();
 
+        System.out.println("Insira a sua altura (em metros): ");
+        imc.setAltura(input.nextDouble());
+        altura = imc.getAltura();
 
-        double imcCalculado = imc.getPeso() / (imc.getAltura() * imc.getAltura());
+        double imcCalculado = peso / (altura * altura);
         System.out.println("O IMC é: " + imc);
 
         if (imcCalculado < 18.5) {
@@ -38,5 +45,4 @@ public class ImcImpl implements ImcService{
             System.out.println("Ocorreu um erro ao tentar exibir um resultado.");
         }
     }
-
 }

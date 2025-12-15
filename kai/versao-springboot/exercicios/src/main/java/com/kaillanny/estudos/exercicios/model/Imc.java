@@ -1,8 +1,8 @@
 package com.kaillanny.estudos.exercicios.model;
 
-import org.springframework.stereotype.Component;
+import lombok.Data;
 
-@Component
+@Data
 public class Imc {
     protected int peso;
     protected double altura;

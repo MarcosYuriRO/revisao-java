@@ -2,7 +2,6 @@ package com.kaillanny.estudos.exercicios.service.temperatura;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kaillanny.estudos.exercicios.model.Temperatura;
@@ -12,15 +11,16 @@ public class TemperaturaImpl implements TemperaturaService {
 
     Scanner input = new Scanner(System.in);
 
-    @Autowired
-    private Temperatura temperatura;
+    int temperaturaEmCelsius;
+
+    Temperatura temperatura = new Temperatura(temperaturaEmCelsius);
 
     @Override
     public void converterTemperatura() {
         int opcao;
         do {
             System.out.println("""
-            Você deseja converter CELSIUS para qual temperatura? 
+            Você deseja converter CELSIUS para qual temperatura?
 
                 1. FAHRENHEIT;
                 2. KELVIN;
@@ -34,30 +34,28 @@ public class TemperaturaImpl implements TemperaturaService {
                 case 1 -> {
                     System.out.println("Você escolheu converter de CELSIUS para FAHRENHEIT");
 
-                    //CORRIGIR URGENTEMENTE
-                    int temperaturaEmCelsius = temperatura.getTemperatura();
                     System.out.println("Insira a temperatura em CELSIUS: ");
-                    temperaturaEmCelsius = input.nextInt();
+                    temperatura.setTemperatura(input.nextInt());
+                    temperaturaEmCelsius = temperatura.getTemperatura();
+
                     int temperaturaEmFahrenheit = (temperaturaEmCelsius * 9 / 5) + 32;
-
                     System.out.printf("A temperatura %d C° convertida para Fahrenheit: %d\n", temperaturaEmCelsius, temperaturaEmFahrenheit);
-
                     break;
                 }
                 case 2 -> {
                     System.out.println("Você escolheu converter de CELSIUS para KELVIN");
                     
-                    int temperaturaEmCelsius = temperatura.getTemperatura();
+                    
                     System.out.println("Insira a temperatura em CELSIUS: ");
-                    temperaturaEmCelsius = input.nextInt();
+                    temperatura.setTemperatura(input.nextInt());
+                    temperaturaEmCelsius = temperatura.getTemperatura();
 
                     double temperaturaEmKelvin = temperaturaEmCelsius + 273.15;
                     System.out.printf("A temperatura %d C° convertida para Kelvin: %.2f ", temperaturaEmCelsius, temperaturaEmKelvin);
-
                     break;
                 }
                 case 0 -> {
-                    System.out.println("Saindo...");
+                    System.out.println("Você escolheu SAIR.");
                     break;
                 } default -> System.out.println("Entrada inválida.");
             }

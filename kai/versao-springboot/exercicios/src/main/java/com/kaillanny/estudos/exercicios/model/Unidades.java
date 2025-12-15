@@ -1,6 +1,17 @@
 package com.kaillanny.estudos.exercicios.model;
 
-@Component
 public class Unidades {
-    private 
+    protected int metros;
+
+    public Unidades(int metros) {
+        this.metros = metros;
+    }
+
+    public int getMetros() {
+        return metros;
+    }
+
+    public void setMetros(int metros) {
+        this.metros = metros;
+    }
 }

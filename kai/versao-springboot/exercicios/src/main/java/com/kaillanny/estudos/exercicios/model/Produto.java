@@ -1,4 +1,5 @@
-@Component
+package com.kaillanny.estudos.exercicios.model;
+
 public class Produto {
     protected int preco;
 
@@ -13,6 +14,4 @@ public class Produto {
     public void setPreco(int preco) {
         this.preco = preco;
     }
-
-    
 }
